@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Js Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading heading--1">SignUp Form</h1>
+      <main class="content">
+        <form class="form" name="myForm">
+          <div class="fgroup" id="ffname">
+            <label for="ffname">
+              <sup class="sign">*</sup>First Name:
+              <input
+                type="text"
+                class="ffname"
+                name="ffname"
+                autocomplete="off"
+              />
+            </label>
+            <span class="err"></span>
+          </div>
+
+          <div class="fgroup" id="flname">
+            <label for="flname">
+              <sup class="sign">*</sup>Last Name:
+              <input
+                type="text"
+                name="flname"
+                class="flname"
+                autocomplete="off"
+              />
+            </label>
+            <span class="err"></span>
+          </div>
+
+          <div class="fgroup" id="femail">
+            <label for="femail">
+              <sup class="sign">*</sup>Email:
+              <input
+                type="email"
+                name="femail"
+                class="femail"
+                autocomplete="off"
+              />
+            </label>
+            <span class="err"></span>
+          </div>
+
+          <div class="fgroup" id="fpassword">
+            <label for="fpassword">
+              <sup class="sign">*</sup>Password:
+              <input
+                type="password"
+                name="fpassword"
+                class="fpassword"
+                autocomplete="off"
+              />
+            </label>
+            <span class="err"></span>
+          </div>
+
+          <div class="fgroup" id="fcpassword">
+            <label for="fcpassword">
+              Confirm Password:
+              <input
+                type="password"
+                name="fcpassword"
+                class="fcpassword"
+                autocomplete="off"
+              />
+            </label>
+            <span class="err"></span>
+          </div>
+
+          <div class="fgroup">
+            <label for="fcountry">Country</label>
+            <select name="fcountry" class="fcountry" autocomplete="off">
+              <option value="" selected>select one</option>
+              <option value="pak">Pak</option>
+              <option value="ind">Ind</option>
+              <option value="bag">Bng</option>
+            </select>
+          </div>
+
+          <div class="fgroup">
+            <label for="fstate">
+              State / Province:
+              <input type="text" name="fstate" class="fstate" />
+            </label>
+          </div>
+
+          <div class="fgroup">
+            <label for="fcity">
+              City:
+              <input
+                type="text"
+                name="fcity"
+                class="fcity"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+
+          <div class="fgroup">
+            <label for="fzcode">
+              Postal / Zip Code:
+              <input type="number" name="fzcode" />
+            </label>
+          </div>
+
+          <input type="submit" class="btn btn--submit" value="submit" />
+        </form>
+      </main>
+    </div>
+
+    <script src="./index1.js"></script>
+  </body>
+</html>

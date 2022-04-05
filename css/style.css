@@ -1,0 +1,125 @@
+/*
+ Font Family
+*/
+@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Roboto:wght@100;300;400;500&display=swap");
+/*
+ Global Setting
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #334242;
+}
+
+/*
+ Variable
+*/
+:root {
+  --spacing: 0.1rem;
+  --clr-text: #fff;
+  --clr-text-1: rgb(110, 255, 110);
+  --clr-text-2: #dccdfc;
+  --clr-text-err: #ff0000;
+  --clr-text-green: green;
+  --clr-black: #000;
+  --clr-white: #fff;
+  --box-shadow-light: 0 0.5rem 1rem black;
+  --box-shadow-medium: 0 0.75rem 1.5rem black;
+  --box-shadow-dark: 0 1rem 2rem black;
+  --border-success: 0.2rem solid green;
+}
+
+/*
+ Heading
+*/
+.heading {
+  color: var(--clr-text);
+}
+.heading--1 {
+  font-size: 3.2rem;
+  font-family: "Mea Culpa", cursive;
+  letter-spacing: var(--spacing);
+  color: var(--clr-text);
+  text-align: center;
+}
+
+/*
+ btn styling
+*/
+.btn {
+  font-size: 1.6rem;
+  border-radius: 0;
+  padding: 0.5em 1em;
+  display: block;
+  cursor: pointer;
+  border: none;
+}
+.btn--submit {
+  margin: 0 auto;
+  background: var(--clr-text-1);
+  box-shadow: var(--box-shadow-light);
+}
+.btn--submit:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--box-shadow-dark);
+}
+.btn--submit:active {
+  transform: translateY(-0.2rem);
+  box-shadow: var(--box-shadow-medium);
+}
+
+/*
+ Form Styling
+*/
+.container {
+  background-color: #999;
+  padding: 1.5rem;
+  width: 35rem;
+}
+.container .form {
+  font-size: 1.4rem;
+  max-width: 31rem;
+}
+.container .form .fgroup {
+  margin: 1rem;
+  font-weight: 500;
+}
+.container .form .fgroup input {
+  width: 90%;
+  margin: 0 auto 0.5rem auto;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid transparent;
+}
+.container .form .fgroup input:focus {
+  outline: none;
+  box-shadow: var(--border-light);
+}
+.container .form .fgroup .imp {
+  font-size: 1.6rem;
+  color: var(--clr-text-required);
+  font-weight: bold;
+}
+
+.err {
+  color: var(--clr-text-err);
+}
+
+.sign {
+  color: var(--clr-text-err);
+}/*# sourceMappingURL=style.css.map */
