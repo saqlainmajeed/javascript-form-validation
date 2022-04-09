@@ -1,66 +1,28 @@
-/*// const ffname = document.querySelector('.ffname').value;
-const ffname = document.forms[0]['ffname'].value;
-const btnSubmit = document.querySelector('.btn--submit');
-
-const check = () => {
-  return false;
-};
-
-// --------clearing field--------------
-const clearFields = () => {
-  errors = document.querySelectorAll('.err');
-
-  for (let item of errors) {
-    item.textContent = '';
-  }
-};
-
-//-----------------setting error---------------
-const setError = (id, err) => {
-  element = document.getElementById(id);
-  const errEl = element.getElementsByClassName('err')[0];
-  errEl.innerHtml = err;
-};
-
-// -------------Validation function----------------
-const validate = () => {
-  let returnVal = true;
-  clearFields();
-
-  if (ffname.length < 5) {
-    setError('ffname', 'First Name should not be empty');
-    returnVal = false;
-  }
-
-  return returnVal;
-};
-
-btnSubmit.addEventListener('click', check);
-*/
-
-/*
-  Form Validation
-*/
-
 // submitting event on form
 const formEl = document.querySelectorAll('.form')[0];
 formEl.addEventListener('submit', (e) => {
-  if (!validate()) {
-    e.preventDefault();
+  e.preventDefault();
+  if (validate()) {
+    alert('Hurrah! Your form is submitted Successfully');
+    clearFields();
   }
 });
 
 // Setting error function
 const setError = (id, err) => {
   document.querySelector(`#${id} .err`).innerText = err;
-  // console.log(id, err);
-  // console.log('serError is called');
-  // let element = document.getElementById(id);
-  // console.log(element.getElementsByClassName('err')[0].innerHtml);
-  // console.log(element.getElementsByClassName('err')[0].innerHtml);
-  // let value = (element.getElementsByClassName('err')[0].innerHtml = err);
-  // console.log(element);
-  // console.log(value);
+};
+
+// Clearing field function After Submittion
+const clearFields = () => {
+  let inputsEl = Array.from(document.getElementsByTagName(`input`));
+
+  inputsEl.forEach((input) => {
+    if (input.value === 'submit') {
+      return;
+    }
+    input.value = '';
+  });
 };
 
 // clear Error function
@@ -83,43 +45,34 @@ const validate = () => {
   let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   if (ffnameEl === '') {
-    setError('ffname', 'This field must be filled');
+    setError('ffname', 'Please! enter first name');
     returnVal = false;
   }
   if (flnameEl === '') {
-    setError('flname', 'This field must be filled');
+    setError('flname', 'Please! enter last name');
     returnVal = false;
   }
 
-  if (!femailEl.match(mailformat)) {
-    setError('femail', 'please enter valid email');
+  if (femailEl === '') {
+    setError('femail', 'Please enter email');
+  } else if (!femailEl.match(mailformat)) {
+    setError('femail', 'Please enter valid email');
   }
 
   if (fpasswordEl === '') {
-    setError('fpassword', 'This field must be filled');
+    setError('fpassword', 'Please! enter password');
     returnVal = false;
   } else if (fpasswordEl.includes('password')) {
-    setError('fpassword', `Password can't contain password`);
+    setError('fpassword', `Password can't contain word "password"`);
     returnVal = false;
   }
   if (fcpasswordEl === '') {
-    setError('fcpassword', 'This field must be filled');
+    setError('fcpassword', 'Please! re-enter the password');
     returnVal = false;
   } else if (fcpasswordEl !== fpasswordEl) {
-    setError('fcpassword', 'Password must match');
+    setError('fcpassword', `Oops! Password doesn't match`);
     returnVal = false;
   }
 
   return returnVal;
 };
-// document.querySelector('form').addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   return false; //validate();
-// });
-// const check = (e) => {
-//   console;
-// };
-
-// const validate = () => {
-//   return false;
-// };

@@ -8,13 +8,13 @@
     <title>Js Form Validation</title>
   </head>
   <body>
+    <h1 class="heading heading--1">SignUp Form</h1>
     <div class="container">
-      <h1 class="heading heading--1">SignUp Form</h1>
       <main class="content">
         <form class="form" name="myForm">
           <div class="fgroup" id="ffname">
             <label for="ffname">
-              <sup class="sign">*</sup>First Name:
+              <span><sup class="sign">*</sup>First Name:</span>
               <input
                 type="text"
                 class="ffname"
@@ -27,7 +27,7 @@
 
           <div class="fgroup" id="flname">
             <label for="flname">
-              <sup class="sign">*</sup>Last Name:
+              <span><sup class="sign">*</sup>Last Name:</span>
               <input
                 type="text"
                 name="flname"
@@ -40,20 +40,15 @@
 
           <div class="fgroup" id="femail">
             <label for="femail">
-              <sup class="sign">*</sup>Email:
-              <input
-                type="email"
-                name="femail"
-                class="femail"
-                autocomplete="off"
-              />
+              <span><sup class="sign">*</sup>Email:</span>
+              <input type="email" name="femail" class="femail" />
             </label>
             <span class="err"></span>
           </div>
 
           <div class="fgroup" id="fpassword">
             <label for="fpassword">
-              <sup class="sign">*</sup>Password:
+              <span><sup class="sign">*</sup>password:</span>
               <input
                 type="password"
                 name="fpassword"
@@ -66,7 +61,7 @@
 
           <div class="fgroup" id="fcpassword">
             <label for="fcpassword">
-              Confirm Password:
+              <span><sup class="sign">*</sup>Confirm Passord:</span>
               <input
                 type="password"
                 name="fcpassword"
@@ -78,7 +73,9 @@
           </div>
 
           <div class="fgroup">
-            <label for="fcountry">Country</label>
+            <label for="fcountry">
+              <span>Country</span>
+            </label>
             <select name="fcountry" class="fcountry" autocomplete="off">
               <option value="" selected>select one</option>
               <option value="pak">Pak</option>
@@ -89,14 +86,14 @@
 
           <div class="fgroup">
             <label for="fstate">
-              State / Province:
+              <span>State:</span>
               <input type="text" name="fstate" class="fstate" />
             </label>
           </div>
 
           <div class="fgroup">
             <label for="fcity">
-              City:
+              <span>City:</span>
               <input
                 type="text"
                 name="fcity"
@@ -108,7 +105,7 @@
 
           <div class="fgroup">
             <label for="fzcode">
-              Postal / Zip Code:
+              <span>Zip Code:</span>
               <input type="number" name="fzcode" />
             </label>
           </div>

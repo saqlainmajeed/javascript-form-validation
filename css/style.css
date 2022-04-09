@@ -2,6 +2,7 @@
  Font Family
 */
 @import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 /*
  Global Setting
 */
@@ -23,7 +24,7 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  background-color: #334242;
+  background-color: #3a4856;
 }
 
 /*
@@ -52,10 +53,12 @@ body {
 }
 .heading--1 {
   font-size: 3.2rem;
-  font-family: "Mea Culpa", cursive;
+  font-family: "Chelsea Market", cursive;
   letter-spacing: var(--spacing);
   color: var(--clr-text);
   text-align: center;
+  margin-bottom: 10px;
+  font-weight: lighter;
 }
 
 /*
@@ -87,19 +90,33 @@ body {
  Form Styling
 */
 .container {
-  background-color: #999;
-  padding: 1.5rem;
+  background: linear-gradient(to right bottom, #020d4b, #03a2eb);
+  padding: 15px 5px;
   width: 35rem;
 }
 .container .form {
   font-size: 1.4rem;
-  max-width: 31rem;
 }
 .container .form .fgroup {
-  margin: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .form .fgroup label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .form .fgroup label sup {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--clr-text-err);
+}
+.container .form .fgroup label span {
+  color: white;
   font-weight: 500;
 }
 .container .form .fgroup input {
+  margin-top: 1rem;
   width: 90%;
   margin: 0 auto 0.5rem auto;
   display: inline-block;
@@ -118,8 +135,12 @@ body {
 
 .err {
   color: var(--clr-text-err);
+  font-weight: 700;
+  font-size: 16px;
 }
 
-.sign {
-  color: var(--clr-text-err);
+@media screen and (max-width: 350px) {
+  .container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
